@@ -8,6 +8,13 @@
 
 <body>
     Hello World!
+    {% if user.is_authenticated %}
+        {{ user.username }}님 어서오세요.
+        <a href="{% url 'logout' %}">로그아웃</a>
+    {% else %}
+        로그인해주세요.
+        <a href="{% url 'login' %}">로그인</a>
+    {% endif %}
 </body>
 
 {% endblock %}
