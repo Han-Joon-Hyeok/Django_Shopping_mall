@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/login.css" />
+</head>
+<body>
+    <div class = "column main">
+        <h1 class = "page-title">
+            Customer Login </h1>
+
+        <div class="registered-customers">
+            <span>로그인</span>
+            <hr>
+            <div class ="login-note">
+                <p>이미 가입한 계정이 있다면 이메일 주소로 로그인 하세요.</p>
+            </div>
+            <fieldset class="fieldset-login">
+                
+
+                <div class = "email-field">
+                    <label class="label" for ="email">
+                        <span>Email</span>
+                    </label> 
+                    <div class = "emaiil-input">
+                        <input name="login[id]" type ="email" id ="email" autocomplete="off" data-validate="{required:true, 'validate-email':ture" aria-required="true">
+                    </div>
+                </div>
+
+                <div class = "password-field">
+                    <label class="label" for ="pass"><span>Password</span>
+                    </label>
+                    <div class = "pass-input">
+                        <input name="login[pass]" type="password" id = "pass" autocomplete="off" data-validate="{required:true} aria-required="true"
+                    </div>  
+                </div>
+
+                <div class= "submit">
+                    <button type="submit" class="login-submit" id="send">
+                        <span><b>Log In</b></span>
+                    </button>
+                </div>
+
+                <div class= "remind">
+                    <a class="remind-pass" href="#">
+                        <span>비밀번호 찾기</span>
+                    </a>
+                </div>
+            
+            </fieldset>
+        </div>
+
+        <div class="new-customers">
+            <span>회원가입</span>
+            <hr>
+            <div class="new-note">
+                <p>계정이 없으시다면 가입해주세요. 가입시 더 많은 혜택을 누릴 수 있습니다.</p>
+            </div>
+            <div class ="create-account">
+                <a href="#" class ="create-account-action">
+                    <button type="button" class="create-account-link" onclick="location.href='register.html'">
+                        <span><b>회원가입하기</b></span>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+        
+
+
+</body>
+</html>
