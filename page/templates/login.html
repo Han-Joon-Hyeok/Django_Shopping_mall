@@ -1,8 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/login.css" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
 </head>
 <body>
     <div class = "column main">
@@ -31,7 +33,7 @@
                     <label class="label" for ="pass"><span>Password</span>
                     </label>
                     <div class = "pass-input">
-                        <input name="login[pass]" type="password" id = "pass" autocomplete="off" data-validate="{required:true} aria-required="true"
+                        <input name="login[pass]" type="password" id = "pass" autocomplete="off" data-validate="{required:true} aria-required="true>
                     </div>  
                 </div>
 
