@@ -8,13 +8,14 @@ class UserManager(BaseUserManager) :
     def create_user(self, user_id, username, address, email, phone_number, password=None):
         if not email :
             raise ValueError(_("이메일을 입력해주세요."))
-        user = self.model(
-            user_id = user_id,
-            username = username,
-            address = address,
-            email = self.normalize_email(email),
-            phone_number = phone_number,
-        )
+        else :
+            user = self.model(
+                user_id = user_id,
+                username = username,
+                address = address,
+                email = self.normalize_email(email),
+                phone_number = phone_number,
+            )
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -39,7 +40,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username            = models.CharField(max_length=10)
     password            = models.CharField(max_length=20)
     address             = models.CharField(max_length=40)
-    phone_number        = models.CharField(max_length=20)
+    phone_number        = models.CharField(max_length=10)
     email               = models.EmailField(max_length=30, unique=True)
     membership          = models.CharField(max_length=20, default="브론즈")
     registered_date     = models.DateTimeField(auto_now_add=True)

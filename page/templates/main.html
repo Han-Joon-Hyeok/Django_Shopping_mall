@@ -7,13 +7,17 @@
 {% block content %}
 
 <body>
-    Hello World!
+    <p> Hello World!</p>
     {% if user.is_authenticated %}
-        {{ user.username }}님 어서오세요.
-        <a href="{% url 'logout' %}">로그아웃</a>
+        <p>
+            {{ user.username }}님 어서오세요.
+            <a href="{% url 'logout' %}">로그아웃</a>
+        </p>
     {% else %}
-        로그인해주세요.
-        <a href="{% url 'login' %}">로그인</a>
+        <p>           
+            <a href="{% url 'login' %}">로그인</a>
+            <a href="{% url 'register' %}">회원가입</a>
+        </p>
     {% endif %}
 </body>
 
