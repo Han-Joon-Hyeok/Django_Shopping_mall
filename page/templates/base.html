@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% block link %} {% endblock %}">
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
     <script src="{% block script %}{% endblock %}"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -14,8 +16,6 @@
     <link rel="stylesheet" href="{% static 'css/grid.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <link rel="stylesheet" href="{% static 'pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}"/>
-    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
-    <script src="{% static 'js/base.js' %}"></script>
 </head>
 <body>
   <div class="wrapper">
