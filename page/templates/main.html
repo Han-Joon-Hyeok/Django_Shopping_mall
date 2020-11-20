@@ -3,11 +3,101 @@
 
 {% block title%}웹프로그래밍 쇼핑몰{% endblock %}
 {% block link %}{% static 'css/main.css' %}{% endblock %}
+{% block script %}{% static 'js/main.js' '%}{% endblock %}
 
 {% block content %}
-
-<body>
-    Hello World!
-</body>
+<div class="banner">
+  <ul class="imgs">
+    <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
+    <li><img src="../static/images/banner-2.jpg" alt="배너2" /></li>
+  </ul>
+  <div class="banner-btn">
+    <div class="prev"><span>prev</span></div>
+    <div class="next"><span>next</span></div>
+  </div>
+</div>
+<section class="main-products">
+  <div class="product">
+    <a href="#">
+      <img src="../static/images/main-product-1.png" alt="패브릭 소파" />
+    </a>
+    <div class="product-desc">
+      <h2>패브릭 소파</h2>
+      <p>부드러운 원단, 편안한 착석감</p>
+      <a href="#">More Detail</a>
+    </div>
+  </div>
+  <div class="product">
+    <div class="product-desc">
+      <h2>1인용 소파</h2>
+      <p>부드러운 원단, 편안한 착석감</p>
+      <a href="#">More Detail</a>
+    </div>
+    <a href="#">
+      <img src="../static/images/main-product-2.png" alt="1인용 소파" />
+    </a>
+</section>
+<section class="best-seller">
+  <div class="best-container">
+    <h2>Best Seller</h2>
+    <p>가장 인기있는 제품들을 한눈에 살펴보세요</p>
+    <div class="best-products">
+      <ul class="best-list">
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/air-fryer-1.png" alt="에어프라이어" />
+          </a>
+          <a href="#"><p>주방가전</p></a>
+          <a href="#"><h3>에어프라이어</h3></a>
+          <p>50,000</p>
+        </li>
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/clock-1.png" alt="시계" />
+          </a>
+          <a href="#"><p>시계</p></a>
+          <a href="#"><h3>벽걸이 시계</h3></a>
+          <p>10,000</p>
+        </li>
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/candle-1.png" alt="캔들" />
+          </a>
+          <a href="#"><p>캔들 & 디퓨저</p></a>
+          <a href="#"><h3>캔들</h3></a>
+          <p>8,000</p>
+        </li>
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/beam-projector-1.png" alt="빔프로젝터" />
+          </a>
+          <a href="#"><p>생활가전</p></a>
+          <a href="#"><h3>빔프로젝터</h3></a>
+          <p>70,000</p>
+        </li>
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/bluetooth-speaker-1.png" alt="블루투스 스피커" />
+          </a>
+          <a href="#"><p>음향 & 영상가전</p></a>
+          <a href="#"><h3>블루투스 스피커</h3></a>
+          <p>200,000</p>
+        </li>
+        <li class="best-list-item">
+          <a href="#">
+            <img src="../static/images/lamp-1.png" alt="조명" />
+          </a>
+          <a href="#"><p>조명</p></a>
+          <a href="#"><h3>스탠드 조명</h3></a>
+          <p>30,000</p>
+        </li>
+      </ul>
+    </div>
+    <div class="best-btn">
+      <div class="best-prev"><span>베스트 상품 이전 슬라이드</span></div>
+      <div class="best-next"><span>베스트 상품 다음 슬라이드</span></div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
