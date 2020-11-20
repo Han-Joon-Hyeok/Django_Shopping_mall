@@ -7,22 +7,20 @@
 
 {% block content %}
 
-<body>
-    {% if user.is_authenticated %}
-        <p>
-            {{ user.username }}님 어서오세요.
-            <a href="{% url 'logout' %}">로그아웃</a>
-        </p>
-        <p>
-            <a href="{% url 'category' %}">카테고리</a>
-        </p>
-    {% else %}
-        <p>           
-            <a href="{% url 'login' %}">로그인</a>
-            <a href="{% url 'register' %}">회원가입</a>
-        </p>
-    {% endif %}
-</body>
+{% if user.is_authenticated %}
+    <p>
+        {{ user.username }}님 어서오세요.
+        <a href="{% url 'logout' %}">로그아웃</a>
+    </p>
+    <p>
+        <a href="{% url 'category' %}">카테고리</a>
+    </p>
+{% else %}
+    <p>           
+        <a href="{% url 'login' %}">로그인</a>
+        <a href="{% url 'register' %}">회원가입</a>
+    </p>
+{% endif %}
 <div class="banner">
   <ul class="imgs">
     <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
