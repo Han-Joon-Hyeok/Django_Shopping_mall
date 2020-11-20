@@ -216,6 +216,12 @@ input {
   display: none;
 }
 
+/* Content */
+
+.content {
+  z-index: 1;
+}
+
 /* Footer */
 
 .footer {
