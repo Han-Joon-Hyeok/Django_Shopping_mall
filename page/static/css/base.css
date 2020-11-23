@@ -42,14 +42,15 @@ a {
 button:focus,
 button:active,
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
   outline: none;
   box-shadow: none;
 }
 
 button {
   border: none;
-  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -79,14 +80,20 @@ input {
 /* Header */
 
 .header-content {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   padding: 15px;
+}
+
+.main {
+  display: inline-block;
+  width: fit-content;
 }
 
 .main h1 {
   position: relative;
   top: -2px;
+  width: fit-content;
   font-family: 'Lato', sans-serif;
   font-size: 36px;
   font-weight: 900;
@@ -126,6 +133,7 @@ input {
   background-color: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   padding: 15px;
+  z-index: 2;
 }
 
 .item-inner li {
@@ -188,6 +196,7 @@ input {
   border: 1px solid #E3E3E3;
   background-color: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
 #search {
@@ -225,7 +234,7 @@ input {
 /* Footer */
 
 .footer {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   background-color: #222;
   color: #fff;
