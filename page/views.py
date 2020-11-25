@@ -28,3 +28,6 @@ def newItem(request):
         # detail 로 넘어가는거
     else:
         return render(request,'newItem.html')
+
+def item(request):
+  return render(request, 'item.html')

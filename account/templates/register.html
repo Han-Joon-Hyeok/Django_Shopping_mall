@@ -6,88 +6,100 @@
 
 {% block content %}
 
-<h1>Create New Customer Account</h1>
-<fieldset class="per-inf">
-    <div class="info-note">
-        <span>개인정보</span>
+<div class="main-wrapper">
+    
+    <h1>Create New Customer Account</h1>
+
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <fieldset class="per-inf">
+            <div class="info-note">
+                <span>개인정보</span>
+            </div>
+            <hr>
+            <div class="name-info">
+        
+                <div class="first">
+                    <label class="label c" for="firstname">
+                        <span>이름</span>
+                    </label>
+                </div>
+                <div class="input-f">
+                    <input name="user_id" type="text" id="firstname" class="h" placeholder="이름">
+                </div>
+        
+            </div>
+        
+            <div class="login-info">
+        
+                <div class="email">
+                    <label class="label c" for="email">
+                        <span>아이디</span>
+                    </label>
+                </div>
+                <div class="emaiil-input">
+                    <input name="user_id" type="text" id="user_id" class="h" placeholder="아이디">
+                </div>
+        
+                <div class="password">
+                    <label class="label c" for="password">
+                        <span>비밀번호</span>
+                    </label>
+                </div>
+                <div class="pass-input">
+                    <input name="password" type="password" id="password" class="h" placeholder="비밀번호">
+                </div>
+        
+                <div class="con-password">
+                    <label class="label c" for="confirm-password">
+                        <span>비밀번호 확인</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input name="password_confirm" type="password" id="confirm-password" class="h" placeholder="비밀번호 확인">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="phone_number">
+                        <span>휴대전화</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="text" name="phone_number" placeholder="휴대전화" class="h">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="address">
+                        <span>주소</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="text" name="address" placeholder="주소" class="h">
+                </div>
+    
+                <div class="con-password">
+                    <label class="label c" for="address">
+                        <span>이메일</span>
+                    </label>
+                </div>
+                <div class="con-pass-input">
+                    <input type="email" name="email" placeholder="이메일" class="h">
+                </div>
+    
+    
+                
+            </div>
+        </fieldset>
+        <div class="submit">
+            <input type="submit" class="register-submit" id="register-send" value="가입하기">
+        </div>
+    </form>
+    
+    
+    <div class="back">
+        <a href="{% url 'main' %}">Back</a>
     </div>
-    <hr>
-    <div class="name-info">
 
-        <div class="first">
-            <label class="label c" for="firstname">
-                <span>이름</span>
-            </label>
-        </div>
-        <div class="input-f">
-            <input name="register[fname]" type="text" id="firstname" class="h" autocomplete="off"
-                data-validate="{required:true}" autocomplete="off" aria-required="true">
-        </div>
-
-        <div class="input-newsletter">
-            <input name="choice[newsletter]" type="checkbox" id="newsletter" value="1">
-        </div>
-        <div class="newsletter">
-            <label class="label" for="newsletter">
-                <span>뉴스레터 받기</span>
-            </label>
-        </div>
-
-    </div>
-
-</fieldset>
-
-
-<fieldset class="sign-info">
-    <div class="info-note">
-        <span>회원가입 정보</span>
-    </div>
-    <hr>
-
-    <div class="login-info">
-
-        <div class="email">
-            <label class="label c" for="email">
-                <span>아이디</span>
-            </label>
-        </div>
-        <div class="emaiil-input">
-            <input name="user_id" type="text" id="user_id" class="h" autocomplete="off"
-                data-validate="{required:true, 'validate-email':ture" aria-required="true">
-        </div>
-
-        <div class="password">
-            <label class="label c" for="password">
-                <span>비밀번호</span>
-            </label>
-        </div>
-        <div class="pass-input">
-            <input name="register[pass]" type="password" id="password" class="h" data-password-min-length="8"
-                data-password-min-character-sets="3" data-validate="{required:true, 'validate-customer-password':true}"
-                autocomplete="off" aria-required="true">
-        </div>
-
-        <div class="con-password">
-            <label class="label c" for="confirm-password">
-                <span>비밀번호 확인</span>
-            </label>
-        </div>
-        <div class="con-pass-input">
-            <input name="register[con-pass]" type="password" id="confirm-password" class="h"
-                data-validate="{required:true, equalTo:'#password'}" autocomplete="off" aria-required="true">
-        </div>
-
-    </div>
-</fieldset>
-
-<div class="submit">
-    <button type="submit" class="register-submit" id="register-send" onclick="location.href='#'">
-        <span><b>가입하기</b></span>
-    </button>
-</div>
-
-<div class="back">
-    <a href="login.html">Back</a>
 </div>
 
 <!-- <form method="POST" action="{% url 'register' %}">

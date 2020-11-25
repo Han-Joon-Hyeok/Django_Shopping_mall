@@ -160,6 +160,20 @@
         <span>600,000</span>
       </div>
     </div>
+<!-- 
+    {% block content %}
+    <div class="item">
+        <p>
+            {% for list in itemList %}
+                상품이름 : {{ list.prdName }} <br>
+                가격 : {{ list.price }} <br>
+            {% endfor %}
+        </p>
+        <p>
+            <a href="{% url 'newItem' %}">상품추가</a>
+        </p>
+    </div>
+    {% endblock %} -->
   </section>
 </div>
 {% endblock %}
