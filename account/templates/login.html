@@ -11,16 +11,12 @@
     alert("로그인 정보가 잘못되었습니다. 다시 입력해주세요.");
 </script>
 {% endif %}
-<div class="column main">
-    <h1 class="page-title">
-        Customer Login </h1>
+<div class="main-wrapper">
+    <h1 class="page-title">Customer Login </h1>
 
     <div class="registered-customers">
         <span>로그인</span>
         <hr>
-        <div class="login-note">
-            <p>이미 가입한 계정이 있다면 이메일 주소로 로그인 하세요.</p>
-        </div>
         <form method="POST">
             {% csrf_token %}
             <fieldset class="fieldset-login">
@@ -30,8 +26,7 @@
                         <span>아이디</span>
                     </label>
                     <div class="emaiil-input">
-                        <input name="user_id" type="email" id="email" autocomplete="off"
-                            data-validate="{required:true, 'validate-email':ture" aria-required="true">
+                        <input name="user_id" type="text">
                     </div>
                 </div>
     
