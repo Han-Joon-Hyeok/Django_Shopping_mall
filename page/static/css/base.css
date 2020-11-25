@@ -230,6 +230,7 @@ input {
   background-color: #222;
   color: #fff;
   padding: 30px 0;
+  clear: both;
 }
 
 .footer-title {
