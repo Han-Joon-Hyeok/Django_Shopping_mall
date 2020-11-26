@@ -25,8 +25,6 @@ $(document).ready(function() {
     $(".total-price").text(comma(totalPrice));
   }
 
-  $("total-products-price").text()
-
   // 상품 수량 변경 시 상품 총 금액 변경하기
 
   var quantity;
@@ -42,6 +40,8 @@ $(document).ready(function() {
       summary();
     });
   });
+
+  // 텍스트에 콤마 넣기, 가져온 텍스트에서 콤마 제거하기
 
   function comma(str) {
     str = String(str);
@@ -72,6 +72,8 @@ $(document).ready(function() {
       }
     });
   });
+
+  // 더 이상 상품이 남아있지 않을 때 문구 띄우기
 
   function emptyContent() {
     var cartContent = $(".cart-content");
