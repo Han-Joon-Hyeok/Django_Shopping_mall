@@ -17,6 +17,9 @@
     <div class="registered-customers">
         <span>로그인</span>
         <hr>
+        <div class="login-note">
+            <p>누구나 예쁜 집에 살 수 있어!</p>
+        </div>
         <form method="POST">
             {% csrf_token %}
             <fieldset class="fieldset-login">
@@ -26,7 +29,7 @@
                         <span>아이디</span>
                     </label>
                     <div class="emaiil-input">
-                        <input name="user_id" type="text">
+                        <input name="user_id" type="text" class="">
                     </div>
                 </div>
     
