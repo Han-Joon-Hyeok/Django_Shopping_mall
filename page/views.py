@@ -28,6 +28,7 @@ def newItem(request):
         # detail 로 넘어가는거
     else:
         return render(request,'newItem.html')
+<<<<<<< HEAD
     # return render(request, 'category.html')
 
 def item(request):
@@ -50,3 +51,8 @@ def register(request):
 
 def orderDetail(request):
   return render(request, 'order-detail.html')
+=======
+
+def item(request):
+  return render(request, 'item.html')
+>>>>>>> backend
