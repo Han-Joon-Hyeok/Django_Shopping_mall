@@ -28,7 +28,7 @@ def newItem(request):
         # detail 로 넘어가는거
     else:
         return render(request,'newItem.html')
-  return render(request, 'category.html')
+    # return render(request, 'category.html')
 
 def item(request):
   return render(request, 'item.html')
