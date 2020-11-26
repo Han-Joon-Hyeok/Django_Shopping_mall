@@ -1,35 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <title>{% block title %}카테고리 페이지{% endblock %}</title>
-    {% block link %}{% static 'css/category.css' %}{% endblock %}
-</head>
-<body>
-    
-{% comment %}
-{% block content %}
-<div class="item">
-    <p>
-        {% for list in itemList %}
-            상품이름 : {{ list.prdName }} <br>
-            가격 : {{ list.price }} <br>
-        {% endfor %}
-    </p>
-    <p>
-        <a href="{% url 'newItem' %}">상품추가</a>
-    </p>
-</div>
-{% endblock %}
-</body>
-</html>
-{% endcomment %}
-
-
-=======
->>>>>>> backend
 
 {% block title%}웹프로그래밍 쇼핑몰{% endblock %}
 {% block link %}{% static 'css/category.css' %}{% endblock %}
