@@ -133,8 +133,17 @@
                 </div>
                 <div class="user-box">
                   <a href="#"><span>user</span></a>
+                  <div class="user-menu">
+                    <ul>
+                      <li><a href="#">회원가입</a></li>
+                      <li><a href="#">로그인</a></li>
+                      <li><a href="{% url 'editInfo' %}">마이페이지</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="cart-box"><span>cart</span></div>
+                <div class="cart-box">
+                  <a href="{% url 'cart' %}"><span>cart</span></a>
+                </div>
               </div>
               </div>
           </div>

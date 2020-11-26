@@ -79,10 +79,28 @@ input {
 
 /* Header */
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: fixedmenu 1s ease 0s normal both 1 running;
+}
+
+@keyframes fixedmenu {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .header-content {
   width: 100vw;
   height: fit-content;
   padding: 15px;
+  background-color: #fff;
 }
 
 .main {
@@ -217,6 +235,39 @@ input {
   font-family: 'Pe-icon-7-stroke';
   content: "\e618";
   font-size: 18px;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  top: 36px;
+  right: -35px;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: 1px solid #E3E3E3;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.user-menu ul li  {
+  width: 80px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.user-menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cart-box a {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: inline-block;
+  width: inherit;
+  height: 35px;
 }
 
 .search-btn span,

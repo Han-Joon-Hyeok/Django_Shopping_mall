@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/register.css' %}"/>
 </head>
 <body>
+  {% block content %}
     <h1>Create New Customer Account</h1>
     <fieldset class="per-inf">
         <div class="info-note">
@@ -97,6 +98,6 @@
     <div class="back">
         <a href="login.html">Back</a>
     </div>
-
+{% endblock %}
 </body>
 </html>
