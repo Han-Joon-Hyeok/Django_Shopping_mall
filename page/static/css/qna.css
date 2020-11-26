@@ -1,0 +1,19 @@
+body {
+    font-family: 'NanumSquare', sans-serif;
+    color: #222;
+    letter-spacing: -0.01em;}
+.address-info{margin-top:75px; font-size:20px;}
+.center{background-color:#f9b71e38; width:600px; height:450px; float: left;}
+.B{padding:5px 5px 5px 15px;}
+.route, .google-map{margin-left:30px;}
+.copy{outline: 0; border: 0; background-color:#f9b71e38; cursor: pointer;}
+.google-map{border:1.5px solid #F9B61E;}
+.qna,.entire-contents{float: left; }
+li {display: inline; padding:0px 30px; font-weight:600; }
+li:hover{color:#F9B61E; cursor: pointer; }
+hr {width:1200px; border:0; height:1px; background-color: rgba(26, 25, 25, 0.171);}
+li.on{color:#F9B61E;}
+.col{color:#F9B61E; font-weight: bold;}
+.h{display: none;}
+.T{cursor: pointer;}
+/* .map{position: absolute; margin-left:600px;} */
