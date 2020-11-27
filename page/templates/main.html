@@ -4,10 +4,15 @@
 {% block title%}웹프로그래밍 쇼핑몰{% endblock %}
 {% block link %}{% static 'css/main.css' %}{% endblock %}
 {% block script %}{% static 'js/main.js' '%}{% endblock %}
+{% block extrahead %}
+  <script src="{% static 'js/imageSlide.js' %}"></script>
+{% endblock %}
 
 {% block content %}
 <div class="banner">
   <ul class="imgs">
+    <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
+    <li><img src="../static/images/banner-2.jpg" alt="배너2" /></li>
     <li><img src="../static/images/banner-1.jpg" alt="배너1" /></li>
     <li><img src="../static/images/banner-2.jpg" alt="배너2" /></li>
   </ul>

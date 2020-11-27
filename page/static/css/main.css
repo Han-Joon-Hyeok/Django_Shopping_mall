@@ -1,25 +1,3 @@
-/* Banner */
-
-.banner {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
-  z-index: -2;
-}
-
-.imgs {
-  position: absolute;
-}
-
-.imgs li {
-  float: left;
-}
-
-.imgs img {
-  width: 100vw;
-  height: auto;
-}
-
 .banner-btn span {
   display: none;
 }

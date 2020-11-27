@@ -2,14 +2,8 @@ $(document).ready(function() {
 
   // Banner
 
-  // 메인 배너
-  var $banner = $(".banner").find("ul");
-  var $bannerWidth;
-  var $bannerHeight;
-  var $bannerLength;
-  var rollingId;
-  var elementHeight;
-  var currentImage = 1;
+  // 메인 배너 버튼 적용
+  var $bannerWidth = $(".imgs").children().outerWidth();
 
   // 베스트 상품 배너
   var $bestProduct = $(".best-products").find("ul");
@@ -18,24 +12,14 @@ $(document).ready(function() {
   var $bestLength;
   var currentBestProduct = 1;
 
-  // mouseover시 타이머 정지,
-  // mouseout시 타이머 다시 실행
-
-  $(".banner").mouseover(function() {
-    clearInterval(rollingId);
-  });
-
-  $(".banner").mouseout(function() {
-    rollingId = setInterval(function() { rollingStart(); }, 5000);
-  });
+  // 이미지 슬라이드 버튼
 
   $(".prev").click(function() {
-    $banner.animate({left: "0px"}, 1000);
-    currentImage = 1;
+    $(".imgs").animate({left: "0px"}, 1000);
   });
 
   $(".next").click(function() {
-    $banner.animate({left: - $bannerWidth + "px"}, 1000);
+    $(".imgs").animate({left: -$bannerWidth + "px"}, 1000);
   });
 
   $(".best-prev").click(function() {
@@ -52,33 +36,11 @@ $(document).ready(function() {
     currentBestProduct = 2;
   });
 
-  // 메인 배너 자동으로 슬라이드시키기
-
-  rollingId = setInterval(function() { rollingStart(); }, 5000);
-  
-  function rollingStart() {
-    if (currentImage == 1) {
-      $banner.animate({left: -$bannerWidth + "px"}, 1000);
-      currentImage = 2;
-    }
-    else {
-      $banner.animate({left: "0px"}, 1000);
-      currentImage = 1;
-    };
-  }
-
-  // 배너 크기 변경
+  // 베스트 상품 배너 크기 변경
 
   elementHeight = setInterval(function() { changeHeight(); }, 10);
 
   function changeHeight() {
-    $bannerWidth = $banner.children().outerWidth();
-    $bannerHeight = $banner.children().outerHeight();
-    $bannerLength = $banner.children().length;
-    $banner.css("width", $bannerWidth * $bannerLength + "px");
-    $banner.css("height", $bannerHeight + "px");
-    $(".banner").css("height", $bannerHeight);
-
     $bestWidth = $bestProduct.children().outerWidth();
     $bestHeight = $bestProduct.children().outerHeight();
     $bestLength = $bestProduct.children().length;
