@@ -10,6 +10,7 @@
     <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
     <script src="{% static 'js/base.js' %}"></script>
     <script src="{% block script %}{% endblock %}"></script>
+    {% block extrahead %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
@@ -162,6 +163,7 @@
             <p class="footer-desc">
               2020년 2학기 웹프로그래밍 기말 프로젝트로 만든 가구 쇼핑몰 웹페이지입니다. HTML, CSS, Javascript, Django를 사용해 개발하였습니다.
             </p>
+            <a href="#"><h2 class="footer-subtitle">FAQ 바로가기</h2></a>
           </div>
           <div class="col-12 col-md-3">
             <h2 class="footer-subtitle">Team Member</h2>
