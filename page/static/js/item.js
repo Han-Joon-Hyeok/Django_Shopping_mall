@@ -4,6 +4,9 @@ $(document).ready(function() {
 
   $(".wish-list-btn").click(function() {
     $(this).toggleClass("clicked");
+    if ($(this).hasClass("clicked")) {
+      alert("위시리스트에 추가되었습니다");
+    } else alert("위시리스트에서 삭제되었습니다");
   });
 
   // 클릭 시 큰 이미지로 띄우기
@@ -24,7 +27,7 @@ $(document).ready(function() {
     });
   });
 
-  // 탭 메뉴 전환
+  // 탭 메뉴 전환 (상품 정보, 리뷰)
 
   var $tabList = $(".product-nav").find("li");
   var $tabContent = $(".tab-content").find(".div");

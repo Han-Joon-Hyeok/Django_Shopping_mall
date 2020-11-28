@@ -36,6 +36,9 @@ def newItem(request):
 def item(request):
   return render(request, 'item.html')
 
+def item(request):
+  return render(request, 'item.html')
+
 def cart(request):
   return render(request, 'cart.html')
 

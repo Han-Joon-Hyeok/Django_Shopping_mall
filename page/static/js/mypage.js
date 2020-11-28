@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  // 이미지 hover시 카트에 추가하는 버튼 나타나도록
+
   var $cartBtns = $(".add-cart");
 
   $cartBtns.each(function() {
@@ -11,6 +13,8 @@ $(document).ready(function() {
     });
 
   });
+
+  // 위시리스트에서 삭제하기
 
   var $wishBtns = $(".add-wishlist");
 
@@ -25,6 +29,8 @@ $(document).ready(function() {
       };
     });
   });
+
+  // 위시리스트에 상품이 더 없을 경우 문구 띄우기
 
   function emptyContent() {
     var wishlistContent = $(".wishlist-items");
