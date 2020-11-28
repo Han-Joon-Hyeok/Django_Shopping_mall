@@ -29,7 +29,7 @@
                         <span>아이디</span>
                     </label>
                     <div class="emaiil-input">
-                        <input name="user_id" type="text" class="">
+                        <input name="user_id" type="text" class="" required>
                     </div>
                 </div>
     
@@ -37,15 +37,12 @@
                     <label class="label" for="pass"><span>비밀번호</span>
                     </label>
                     <div class="pass-input">
-                        <input name="password" type="password" id="pass" autocomplete="off"
-                            data-validate="{required:true} aria-required=" true>
+                        <input name="password" type="password" id="pass" autocomplete="off" required>
                     </div>
                 </div>
     
                 <div class="submit">
-                    <button type="submit" class="login-submit" id="send">
-                        <span><b>Log In</b></span>
-                    </button>
+                    <input type="submit" class="login-submit" id="send" value="로그인">
                 </div>
         </form>
 
