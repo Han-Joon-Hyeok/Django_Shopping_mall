@@ -343,7 +343,7 @@ input {
 }
 
 .member ul li:first-child a::before {
-  background-image: url("../images/email.png");
+  background-image: url("../images/instagram.png");
 }
 
 .member ul li:last-child a::before {
