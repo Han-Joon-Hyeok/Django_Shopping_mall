@@ -62,7 +62,6 @@ $(document).ready(function() {
 
   $wishBtns.each(function() {
     $(this).click(function() {
-      console.log("실행");
       if ($(this).hasClass("added") == false) {
         var addWish = confirm("위시리스트에 이 상품을 등록하시겠습니까?");
         if (addWish) {
