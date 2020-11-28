@@ -36,13 +36,13 @@ class UserManager(BaseUserManager) :
         return user
 
 class User(AbstractBaseUser, PermissionsMixin):
-    user_id             = models.CharField(max_length=20, unique=True)
-    username            = models.CharField(max_length=10)
-    password            = models.CharField(max_length=20)
-    address             = models.CharField(max_length=40)
-    phone_number        = models.CharField(max_length=10)
-    email               = models.EmailField(max_length=30, unique=True)
-    membership          = models.CharField(max_length=20, default="브론즈")
+    user_id             = models.CharField(max_length=50, unique=True)
+    username            = models.CharField(max_length=50)
+    password            = models.CharField(max_length=50)
+    address             = models.CharField(max_length=50)
+    phone_number        = models.CharField(max_length=50)
+    email               = models.EmailField(max_length=50, unique=True)
+    membership          = models.CharField(max_length=50, default="브론즈")
     registered_date     = models.DateTimeField(auto_now_add=True)
     is_superuser        = models.BooleanField(default=False)
 
