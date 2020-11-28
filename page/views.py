@@ -36,8 +36,6 @@ def newItem(request):
 def item(request):
   return render(request, 'item.html')
 
-def item(request):
-  return render(request, 'item.html')
 
 def cart(request):
   return render(request, 'cart.html')
@@ -81,3 +79,6 @@ def register(request):
 
 def orderDetail(request):
   return render(request, 'order-detail.html')
+
+def faq(request) :
+  return render(request, 'qna.html')
