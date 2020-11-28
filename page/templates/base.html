@@ -148,7 +148,13 @@
                   </div>
                 </div>
                 <div class="cart-box">
-                  <a href="{% url 'cart' %}"><span>cart</span></a>
+                  <a href="
+                  {% if user.is_authenticated %}
+                  {% url 'cart' %}
+                  {% else %}
+                  {% url 'login' %}
+                  {% endif %}
+                  "><span>cart</span></a>
                 </div>
               </div>
               </div>
