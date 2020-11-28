@@ -135,14 +135,14 @@
                   <a href="#"><span>user</span></a>
                   <div class="user-menu">
                     <ul>
-                      <li><a href="#">회원가입</a></li>
                       {% if user.is_authenticated %}
                         <li>{{ user.username }}님 어서오세요.</li>
                         <li><a href="{% url 'logout' %}">로그아웃</a></li>
+                        <li><a href="{% url 'editInfo' %}">마이페이지</a></li>
                       {% else %}
+                        <li><a href="{% url 'register' %}">회원가입</a></li>
                         <li><a href="{% url 'login' %}">로그인</a></li>
                       {% endif %}
-                      <li><a href="{% url 'editInfo' %}">마이페이지</a></li>
                     </ul>
                   </div>
                 </div>

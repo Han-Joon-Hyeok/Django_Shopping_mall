@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import Product
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.models import User
+from django.contrib import auth
 
 # Create your views here.
 
@@ -37,7 +40,24 @@ def cart(request):
   return render(request, 'cart.html')
 
 def editInfo(request):
-  return render(request, 'edit-info.html')
+  context= {}
+  if request.method == "POST":
+      change_password = request.POST.get("password")
+      password_confirm = request.POST.get("re-password")
+      new_address = request.POST.get("address")
+      user = request.user
+      if (change_password != None ) and (change_password == password_confirm) :
+          user.set_password(change_password)
+          user.address = new_address
+          user.save()
+          auth.login(request,user)
+          return redirect("editInfo")
+      else:
+          context.update({'error':"새로운 비밀번호를 다시 확인해주세요."})
+  else:
+      context.update({'error':"현재 비밀번호가 일치하지 않습니다."})
+
+  return render(request, "edit-info.html",context)
 
 def wishlist(request):
   return render(request, 'wish-list.html')

@@ -465,3 +465,15 @@ td.orderer-info {
 .delivery-table p {
   margin-bottom: 10px;
 }
+
+.login-link{
+  color: blue;
+}
+
+.login-link:hover{
+  color: rgb(129, 129, 219);
+}
+
+input:read-only{
+  background-color: #E3E3E3;
+}
