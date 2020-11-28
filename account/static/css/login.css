@@ -45,7 +45,7 @@ fieldset {
   font-size: 20px;
 }
 
-input[type='submit'] {
+button {
   margin-top: 30px;
   padding: 10px;
   outline: 0;
@@ -54,7 +54,17 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-input[type='submit']:hover {
+input[type='submit']{
+  margin-top: 30px;
+  width: 100px;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  float: left;
+  cursor: pointer;
+}
+
+button:hover, input[type='submit']:hover {
   color: white;
   background-color: #F9B61E;
 }
