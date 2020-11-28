@@ -188,7 +188,7 @@
 
 .category-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin: 30px 0 50px;
@@ -201,7 +201,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 13px;
 }
 
 .image-container {
@@ -258,6 +258,40 @@
   left: 15px;
   font-weight: 700;
   color: #fff;
+}
+
+.add-wishlist {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  z-index: 999;
+}
+
+.add-wishlist button {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/wish.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+
+.add-wishlist button:hover {
+  background-image: url("../images/fill-wish.png");
+}
+
+button.added {
+  background-image: url("../images/fill-wish.png");
+}
+
+.add-wishlist span {
+  display: none;
 }
 
 .list-item strong {

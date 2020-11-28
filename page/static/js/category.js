@@ -19,16 +19,31 @@ $(document).ready(function() {
   
   // 상품 이미지 hover => Add to cart 버튼 나타나게 하기
 
-  var $btns = $(".add-cart");
+  var $cartBtns = $(".add-cart");
 
-  $btns.each(function() {
+  $cartBtns.each(function() {
     // 이미지 hover
     $(this).parent().hover(function() {
-      $(this).find("div").animate({bottom: "0"}, "300ms");
+      $(this).find(".add-cart").animate({bottom: "0"}, "300ms");
     }, function() {
-      $(this).find("div").animate({bottom: "-40px"}, "fast");
+      $(this).find(".add-cart").animate({bottom: "-40px"}, "fast");
     });
 
+  });
+
+  // 위시리스트 추가 여부 묻기
+
+  var $wishBtns = $(".add-wishlist");
+
+  $wishBtns.each(function() {
+    $(this).click(function() {
+      var cancelWish = confirm("위시리스트에 이 상품을 등록하시겠습니까?");
+      if (cancelWish) {
+        // 위시리스트 등록 처리
+        alert("위시리스트에 등록되었습니다.");
+        $(this).find("button").addClass("added");
+      };
+    });
   });
 
 });

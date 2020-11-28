@@ -9,6 +9,7 @@ def main(request):
     return render(request, 'main.html')
 
 def category(request):
+<<<<<<< HEAD
     itemList = Product.objects.all()
     return render(request, 'category.html', {'itemList':itemList})
 
@@ -31,3 +32,27 @@ def newItem(request):
 
 def item(request):
   return render(request, 'item.html')
+=======
+  return render(request, 'category.html')
+
+def item(request):
+  return render(request, 'item.html')
+
+def cart(request):
+  return render(request, 'cart.html')
+
+def editInfo(request):
+  return render(request, 'edit-info.html')
+
+def wishlist(request):
+  return render(request, 'wish-list.html')
+
+def orderList(request):
+  return render(request, 'order-list.html')
+
+def register(request):
+  return render(request, 'register.html')
+
+def orderDetail(request):
+  return render(request, 'order-detail.html')
+>>>>>>> 11907399d35d418209115046345c193079abdf59
