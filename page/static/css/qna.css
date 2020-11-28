@@ -84,6 +84,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   width: 1140px;
+  height: fit-content;
   padding: 0 15px;
   margin: 0 auto;
 }
