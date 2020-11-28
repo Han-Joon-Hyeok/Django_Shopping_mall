@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'q&1)v^5hj_ttdv-ra)4y4m)#@mbrgaclb#d+q%p94&6wepdk07'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','q&1)v^5hj_ttdv-ra)4y4m)#@mbrgaclb#d+q%p94&6wepdk07')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = False
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -130,7 +132,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'page/static'),
     os.path.join(BASE_DIR, 'account/static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR,'.static')
+STATIC_ROOT = os.path.join(BASE_DIR,'.static_root')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, '.media')
