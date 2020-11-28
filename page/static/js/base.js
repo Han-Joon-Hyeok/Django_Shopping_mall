@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
   function fixed() {
-    if ($(window).scrollTop() > 400) {
+    if ($(window).scrollTop() > 200) {
       $("header").addClass("fixed");
     } else {
       $("header").removeClass("fixed");
