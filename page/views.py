@@ -45,13 +45,21 @@ def editInfo(request):
       change_password = request.POST.get("password")
       password_confirm = request.POST.get("re-password")
       new_address = request.POST.get("address")
+      new_phone_number = request.POST.get("phone_number")
       user = request.user
       if (change_password != None ) and (change_password == password_confirm) :
-          user.set_password(change_password)
-          user.address = new_address
-          user.save()
-          auth.login(request,user)
-          return redirect("editInfo")
+        user.set_password(change_password)
+        user.address = new_address
+        user.phone_number = new_phone_number
+        user.save()
+        auth.login(request,user)
+        return redirect("editInfo")
+      elif change_password == None :
+        user.address = new_address
+        user.phone_number = new_phone_number
+        user.save()
+        auth.login(request,user)
+        return redirect("editInfo")
       else:
           context.update({'error':"새로운 비밀번호를 다시 확인해주세요."})
   else:
