@@ -6,16 +6,28 @@ body {
 
 h1 {
   font-size: 30px;
+  margin-bottom: 20px;
+}
+
+hr{
+  margin: 10px 0;
 }
 
 p {
   font-size: 15px;
 }
 
+div.main-wrapper{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+}
+
 .registered-customers {
   width: 500px;
   font-size: 20px;
-  float: left;
+  margin-bottom: 40px;
 }
 
 fieldset {
@@ -30,9 +42,7 @@ fieldset {
 
 .new-customers {
   width: 500px;
-  margin-left: 50px;
   font-size: 20px;
-  float: left;
 }
 
 button {
@@ -84,6 +94,7 @@ input {
   height: 20px;
   border: 1px solid gray;
   border-radius: 2px;
+  width: 175px;
 }
 
 .password-field {
