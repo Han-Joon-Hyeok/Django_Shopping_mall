@@ -22,7 +22,7 @@ class UserManager(BaseUserManager) :
 
     def create_superuser(self, user_id, username, address, email, password, phone_number):
 
-        user = self.create(
+        user = self.create_user(
             user_id = user_id, 
             username = username,
             address = address,

@@ -10,7 +10,7 @@ def login(request):
         user_id = request.POST['user_id']
         password = request.POST['password']
         user = auth.authenticate(request, user_id=user_id, password=password)
-        if user != None:
+        if user is not None:
             auth.login(request, user)
             return redirect('main')
         else:
@@ -33,6 +33,7 @@ def register(request) :
                 password = request.POST["password"],
                 phone_number = request.POST["phone_number"],
             )
+            user.set_password(request.POST["password"])
             user.save()
             auth.login(request, user)
             return redirect('main')

@@ -20,29 +20,31 @@
         <div class="login-note">
             <p>누구나 예쁜 집에 살 수 있어!</p>
         </div>
-        <form method="POST">
+        <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
             <fieldset class="fieldset-login">
-    
+
                 <div class="email-field">
-                    <label class="label" for="email">
+                    <label class="label" for="user_id">
                         <span>아이디</span>
                     </label>
                     <div class="emaiil-input">
                         <input name="user_id" type="text" class="" required>
                     </div>
                 </div>
-    
+
                 <div class="password-field">
-                    <label class="label" for="pass"><span>비밀번호</span>
+                    <label class="label" for="password"><span>비밀번호</span>
                     </label>
                     <div class="pass-input">
-                        <input name="password" type="password" id="pass" autocomplete="off" required>
+                        <input name="password" type="password" id="pass" required>
                     </div>
                 </div>
-    
+
                 <div class="submit">
-                    <input type="submit" class="login-submit" id="send" value="로그인">
+                    <button type="submit" class="login-submit" id="send">
+                        로그인
+                    </button>
                 </div>
         </form>
 
