@@ -17,6 +17,10 @@
 <script>
   alert("비밀번호를 입력하거나 비밀번호를 다시 확인해주세요.");
 </script>
+{% else error == 'notice' %}
+<script>
+  alert("정보를 수정할 경우 비밀번호도 같이 입력해주어야 합니다.");
+</script>
 {% endif %}
 
 <div class="mypage-container">

@@ -57,7 +57,7 @@ def editInfo(request):
       else:
         return render(request, 'edit-info.html', {'error':"password_confirm"})
   else:
-      return render(request, 'edit-info.html', {'error':"password_confirm"})
+      return render(request, 'edit-info.html', {'error':"notice"})
 
   # return render(request, "edit-info.html",context)
 
