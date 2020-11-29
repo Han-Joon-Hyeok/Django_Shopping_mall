@@ -25,7 +25,7 @@ def logout(request):
 def register(request) :
     if request.method == "POST" :
         if request.POST["password"] == request.POST["password_confirm"] :
-            user = User.objects.create_user(
+            user = User.objects.create(
                 user_id = request.POST["user_id"],
                 username = request.POST["username"],
                 email = request.POST["email"],
@@ -33,6 +33,7 @@ def register(request) :
                 password = request.POST["password"],
                 phone_number = request.POST["phone_number"],
             )
+            user.set_password(request.POST["password"])
             user.save()
             auth.login(request, user)
             return redirect('main')

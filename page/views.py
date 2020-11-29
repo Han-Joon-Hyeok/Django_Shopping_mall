@@ -41,7 +41,6 @@ def cart(request):
   return render(request, 'cart.html')
 
 def editInfo(request):
-  context= {}
   if request.method == "POST":
       change_password = request.POST.get("password")
       password_confirm = request.POST.get("re-password")
@@ -54,19 +53,11 @@ def editInfo(request):
         user.phone_number = new_phone_number
         user.save()
         auth.login(request,user)
-        return redirect("editInfo")
-      elif change_password == None :
-        user.address = new_address
-        user.phone_number = new_phone_number
-        user.save()
-        auth.login(request,user)
-        return redirect("editInfo")
+        return render(request, "edit-info.html", {'error':'ok'})
       else:
-          context.update({'error':"새로운 비밀번호를 다시 확인해주세요."})
+        return render(request, 'edit-info.html', {'error':"password_confirm"})
   else:
-      context.update({'error':"현재 비밀번호가 일치하지 않습니다."})
-
-  return render(request, "edit-info.html",context)
+      return render(request, 'edit-info.html', {'error':"notice"})
 
 def wishlist(request):
   return render(request, 'wish-list.html')
