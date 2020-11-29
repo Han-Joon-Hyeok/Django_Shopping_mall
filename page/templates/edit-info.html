@@ -9,6 +9,12 @@
 
 {% if user.is_authenticated %}
 
+{% if context is not None %}
+<script>
+    alert("로그인 정보가 잘못되었습니다. 다시 입력해주세요.");
+</script>
+{% endif %}
+
 <div class="mypage-container">
   <aside class="category-menu">
     <h3>My Page</h3>
